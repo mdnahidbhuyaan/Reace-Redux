@@ -1,11 +1,11 @@
-/* eslint-disable no-unused-vars */
 import React from 'react'
 import TodoItem from './TodoItem'
+import styles from './TodoItems.module.css'
 const TodoItems = ({todoItems}) => {
   return (
-        <div className="items-container">
-        <TodoItem tododate={"4/10/2023"} todoname={"Buy Milk"}/>
-        <TodoItem tododate={"4/10/2023"} todoname={"Go to Collage"}/>
+        <div className={styles.itemsContainer}>
+           {todoItems.map(item => <TodoItem todoDate={item.deoDate} todoname={item.name}/>)}
+      
      
      
       </div>
