@@ -1,9 +1,14 @@
-import React from 'react'
-import './App.css'
+
+// eslint-disable-next-line no-unused-vars
+import styles from "./app.module.css"
+import ButtonContainer from "./components/ButtonContainer"
+import Display from "./components/Display"
 const App = () => {
   return (
-    <div>
-      Calculator
+    <div className={styles.calculator}>
+      <Display></Display>
+      <ButtonContainer></ButtonContainer>
+ 
     </div>
   )
 }
