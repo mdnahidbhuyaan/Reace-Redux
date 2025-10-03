@@ -5,6 +5,7 @@ const FoodItems = ({items}) => {
 
 let [activeItems,setActiveItems] = useState([])
 
+// eslint-disable-next-line no-unused-vars
 let onBuyButton = (item,event) => {
 let newItems = [...activeItems,item]
 setActiveItems(newItems);
