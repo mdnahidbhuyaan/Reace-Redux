@@ -1,47 +1,51 @@
-import React from 'react'
-import { useState } from 'react'
+import React from "react";
+import { useRef } from "react";
 import { IoMdAddCircleOutline } from "react-icons/io";
 
+const AddTodo = ({ onNewItem }) => {
 
-const AddTodo = ({onNewItem}) => {
-
-const [todoName,setTodoName] = useState('')
-const [dueDate,setDueDate] = useState('')
-
-const handleNameChange = (event)=>{
-setTodoName(event.target.value)
-}
-const handleDateChange = (event)=>{
-  setDueDate(event.target.value)
-}
-
-const handleAddButtonClick = ()=>{
-onNewItem(todoName,dueDate)
-setTodoName("")
-setDueDate("")
-}
+  const todoNameElements = useRef();
+  const dueDateElements = useRef();
 
 
 
-
+  const handleAddButtonClick = (event) => {
+    event.preventDefault();
+    const todoName = todoNameElements.current.value;
+    const dueDate = dueDateElements.current.value;
+    todoNameElements.current.value = "";
+    dueDateElements.current.value = "";
+    onNewItem(todoName, dueDate);
+   
+  };
 
   return (
-     <div className="container text-center">
-        <div className="row kg-row">
-          <div className="col-6">
-            <input type="text" placeholder="Enter Todo Here" value={todoName} onChange={handleNameChange}/>
-          </div>
-          <div className="col-4">
-            <input type="date" value={dueDate} onChange={handleDateChange}/>
-          </div>
-          <div className="col-2">
-            <button type="button " className="btn btn-success kg-button" onClick = {handleAddButtonClick}>
-             <IoMdAddCircleOutline className="add-icon"/>
-            </button>
-          </div>
+    <div className="container text-center">
+      <form className="row kg-row" onSubmit={handleAddButtonClick}>
+        <div className="col-6">
+          <input
+            type="text"
+            ref={todoNameElements}
+            placeholder="Enter Todo Here"
+    
+        
+          />
         </div>
-      </div>
-  )
-}
+        <div className="col-4">
+          <input type="date"
 
-export default AddTodo
+      
+           ref={dueDateElements}
+             />
+        </div>
+        <div className="col-2">
+          <button type="submit" className="btn btn-success kg-button">
+            <IoMdAddCircleOutline className="add-icon" />
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default AddTodo;
