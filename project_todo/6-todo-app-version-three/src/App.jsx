@@ -1,30 +1,40 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
 import "./App.css";
 import TodoItems from "./components/TodoItems";
+import WelcomeMassage from "./components/WelcomeMassage";
 
 const App = () => {
-  const  todoItems = [
-    {
-   name:"Buy Milk",
-   deoDate:"4/10/2023"
-    },
-    {
-      name:"Go to Collage",
-      deoDate:"4/10/2023"
-    },
-       {
-      name:"Like this video",
-      deoDate:"right now"
-    },
-  ]
+
+
+
+  const [todoItems, setTodoItems] = useState([])
+ const handleNewItem = (itemName,itemDueDate)=>{
+  
+  const newTodoItems = [...todoItems,{
+         name:itemName,
+      deoDate:itemDueDate
+  }
+   
+]
+setTodoItems(newTodoItems)
+ }
+
+const handleDeleteItem = (todoItemName)=>{
+  const newTodoItems = todoItems.filter(item => item.name !== todoItemName)
+  setTodoItems(newTodoItems)
+}
+
+
+ 
   return (
     <center className="todo-container">
       <AppName />
-      <AddTodo />
-      <TodoItems todoItems={todoItems}/>
+      <AddTodo onNewItem={handleNewItem}/>
+      {todoItems.length === 0 && <WelcomeMassage></WelcomeMassage>}
+      <TodoItems todoItems={todoItems} onDeleteClick = {handleDeleteItem}/>
 
 
     </center>

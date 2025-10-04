@@ -1,6 +1,6 @@
 import React from 'react'
-
-const TodoItem = ({todoname,tododate}) => {
+import { MdAutoDelete } from "react-icons/md";
+const TodoItem = ({todoname,tododate,onDeleteClick}) => {
 
   return (
 
@@ -9,8 +9,8 @@ const TodoItem = ({todoname,tododate}) => {
           <div className="col-6">{todoname}</div>
           <div className="col-4">{tododate}</div>
           <div className="col-2">
-            <button type="button " className="btn btn-danger kg-button">
-              Delete
+            <button type="button " className="btn btn-danger kg-button" onClick={()=>onDeleteClick(todoname)}>
+              <MdAutoDelete className="add-icon"/>
             </button>
           </div>
         </div>
