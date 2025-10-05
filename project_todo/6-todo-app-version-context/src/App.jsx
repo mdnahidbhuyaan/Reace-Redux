@@ -29,7 +29,7 @@ const App = () => {
     <center className="todo-container">
       <AppName />
       <AddTodo onNewItem={handleNewItem} />
-     <WelcomeMassage todoItems = {todoItems}></WelcomeMassage >
+      {todoItems.length === 0 && <WelcomeMassage></WelcomeMassage>}
       <TodoItems todoItems={todoItems} onDeleteClick={handleDeleteItem} />
     </center>
   );

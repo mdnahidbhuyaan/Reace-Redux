@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './WelcomeMassage.module.css'
-const WelcomeMassage = ({todoItems}) => {
+const WelcomeMassage = () => {
   return (
     <div >
-      {todoItems.lenght === 0  && <p className={style.welcome}>Enjoy your day</p>}
+      <p className={style.welcome}>Enjoy your day</p>
     </div>
   )
 }
