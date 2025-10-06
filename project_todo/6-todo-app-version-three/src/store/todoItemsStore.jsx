@@ -1,11 +1,4 @@
 import React from 'react'
+import { createContext } from 'react'
 
-const todoItemsStore = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default todoItemsStore
+export const TodoItemsContext = createContext([])
