@@ -3,7 +3,7 @@ import React from "react";
 const Sidebar = () => {
   return (
     <div
-      class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
+      class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
       style={{width: "280px"}}
     >
       {" "}
@@ -47,54 +47,10 @@ const Sidebar = () => {
             >
               <use XlinkHref="#speedometer2"></use>
             </svg>
-            Dashboard
+            Create Post
           </a>{" "}
         </li>{" "}
-        <li>
-          {" "}
-          <a href="#" class="nav-link text-white">
-            {" "}
-            <svg
-              class="bi pe-none me-2"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <use XlinkHref="#table"></use>
-            </svg>
-            Orders
-          </a>{" "}
-        </li>{" "}
-        <li>
-          {" "}
-          <a href="#" class="nav-link text-white">
-            {" "}
-            <svg
-              class="bi pe-none me-2"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <use XlinkHref="#grid"></use>
-            </svg>
-            Products
-          </a>{" "}
-        </li>{" "}
-        <li>
-          {" "}
-          <a href="#" class="nav-link text-white">
-            {" "}
-            <svg
-              class="bi pe-none me-2"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <use XlinkHref="#people-circle"></use>
-            </svg>
-            Customers
-          </a>{" "}
-        </li>{" "}
+       
       </ul>{" "}
       <hr />{" "}
       <div class="dropdown">
