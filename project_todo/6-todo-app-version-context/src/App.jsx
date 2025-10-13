@@ -9,8 +9,6 @@ import WelcomeMassage from "./components/WelcomeMassage";
 const App = () => {
   const [todoItems, setTodoItems] = useState([]);
   const handleNewItem = (itemName, itemDueDate) => {
-
-
     setTodoItems((currentValue) => [
       ...currentValue,
       {
@@ -26,7 +24,7 @@ const App = () => {
   };
 
   return (
-    <center className="todo-container">
+    <center classNameName="todo-container">
       <AppName />
       <AddTodo onNewItem={handleNewItem} />
       {todoItems.length === 0 && <WelcomeMassage></WelcomeMassage>}

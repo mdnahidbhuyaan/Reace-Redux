@@ -6,29 +6,26 @@ import "./App.css";
 import TodoItems from "./components/TodoItems";
 
 const App = () => {
-  const  todoItems = [
+  const todoItems = [
     {
-   name:"Buy Milk",
-   deoDate:"4/10/2023"
+      name: "Buy Milk",
+      deoDate: "4/10/2023",
     },
     {
-      name:"Go to Collage",
-      deoDate:"4/10/2023"
+      name: "Go to Collage",
+      deoDate: "4/10/2023",
     },
-       {
-      name:"Like this video",
-      deoDate:"right now"
+    {
+      name: "Like this video",
+      deoDate: "right now",
     },
-  ]
+  ];
   return (
-    <center className="todo-container">
+    <center classNameName="todo-container">
       <AppName />
       <AddTodo />
-      <TodoItems todoItems={todoItems}/>
-
-
+      <TodoItems todoItems={todoItems} />
     </center>
-    
   );
 };
 

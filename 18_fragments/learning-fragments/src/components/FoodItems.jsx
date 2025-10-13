@@ -1,27 +1,27 @@
-import React, { useState } from 'react'
-import Item from './Item';
+import React, { useState } from "react";
+import Item from "./Item";
 
-const FoodItems = ({items}) => {
+const FoodItems = ({ items }) => {
+  let [activeItems, setActiveItems] = useState([]);
 
-let [activeItems,setActiveItems] = useState([])
-
-// eslint-disable-next-line no-unused-vars
-let onBuyButton = (item,event) => {
-let newItems = [...activeItems,item]
-setActiveItems(newItems);
-}
-
+  // eslint-disable-next-line no-unused-vars
+  let onBuyButton = (item, event) => {
+    let newItems = [...activeItems, item];
+    setActiveItems(newItems);
+  };
 
   return (
-     <ul className="list-group">
-      {items.map((item)=>( 
-        <Item key={item} foodItems={item}
+    <ul classNameName="list-group">
+      {items.map((item) => (
+        <Item
+          key={item}
+          foodItems={item}
           bought={activeItems.includes(item)}
-         handleBuyButton= {(event)=>onBuyButton(item,event)}/>
-))}
+          handleBuyButton={(event) => onBuyButton(item, event)}
+        />
+      ))}
+    </ul>
+  );
+};
 
-</ul>
-  )
-}
-
-export default FoodItems
+export default FoodItems;

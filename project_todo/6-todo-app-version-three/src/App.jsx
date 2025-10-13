@@ -10,7 +10,6 @@ import { TodoItemsContext } from "./store/todoItemsStore";
 const App = () => {
   const [todoItems, setTodoItems] = useState([]);
 
-
   const handleNewItem = (itemName, itemDueDate) => {
     const newTodoItems = [
       ...todoItems,
@@ -27,13 +26,11 @@ const App = () => {
     setTodoItems(newTodoItems);
   };
 
-  const defaultTodoItems = [
-    { name: "Buy Milk", dueDate: "Today" }
-  ];
+  const defaultTodoItems = [{ name: "Buy Milk", dueDate: "Today" }];
 
   return (
     <TodoItemsContext.Provider value={defaultTodoItems}>
-      <center className="todo-container">
+      <center classNameName="todo-container">
         <AppName />
         <AddTodo onNewItem={handleNewItem} />
         <WelcomeMassage todoItems={todoItems}></WelcomeMassage>

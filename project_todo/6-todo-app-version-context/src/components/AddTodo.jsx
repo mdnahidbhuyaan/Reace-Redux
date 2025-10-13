@@ -3,11 +3,8 @@ import { useRef } from "react";
 import { IoMdAddCircleOutline } from "react-icons/io";
 
 const AddTodo = ({ onNewItem }) => {
-
   const todoNameElements = useRef();
   const dueDateElements = useRef();
-
-
 
   const handleAddButtonClick = (event) => {
     event.preventDefault();
@@ -16,31 +13,24 @@ const AddTodo = ({ onNewItem }) => {
     todoNameElements.current.value = "";
     dueDateElements.current.value = "";
     onNewItem(todoName, dueDate);
-   
   };
 
   return (
-    <div className="container text-center">
-      <form className="row kg-row" onSubmit={handleAddButtonClick}>
-        <div className="col-6">
+    <div classNameName="container text-center">
+      <form classNameName="row kg-row" onSubmit={handleAddButtonClick}>
+        <div classNameName="col-6">
           <input
             type="text"
             ref={todoNameElements}
             placeholder="Enter Todo Here"
-    
-        
           />
         </div>
-        <div className="col-4">
-          <input type="date"
-
-      
-           ref={dueDateElements}
-             />
+        <div classNameName="col-4">
+          <input type="date" ref={dueDateElements} />
         </div>
-        <div className="col-2">
-          <button type="submit" className="btn btn-success kg-button">
-            <IoMdAddCircleOutline className="add-icon" />
+        <div classNameName="col-2">
+          <button type="submit" classNameName="btn btn-success kg-button">
+            <IoMdAddCircleOutline classNameName="add-icon" />
           </button>
         </div>
       </form>

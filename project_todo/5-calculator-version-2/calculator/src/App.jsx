@@ -13,14 +13,14 @@ const App = () => {
       setCalVal("");
     } else if (buttonText === "=") {
       const result = eval(calVal);
-      setCalVal(result)
+      setCalVal(result);
     } else {
       const newDisplayValue = calVal + buttonText;
       setCalVal(newDisplayValue);
     }
   };
   return (
-    <div className={styles.calculator}>
+    <div classNameName={styles.calculator}>
       <Display displayValue={calVal}></Display>
       <ButtonContainer onButtonClick={onButtonClick}></ButtonContainer>
     </div>

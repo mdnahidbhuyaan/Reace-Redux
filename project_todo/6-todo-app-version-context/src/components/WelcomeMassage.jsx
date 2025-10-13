@@ -1,11 +1,11 @@
-import React from 'react'
-import style from './WelcomeMassage.module.css'
+import React from "react";
+import style from "./WelcomeMassage.module.css";
 const WelcomeMassage = () => {
   return (
-    <div >
-      <p className={style.welcome}>Enjoy your day</p>
+    <div>
+      <p classNameName={style.welcome}>Enjoy your day</p>
     </div>
-  )
-}
+  );
+};
 
-export default WelcomeMassage
+export default WelcomeMassage;

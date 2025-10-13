@@ -7,17 +7,14 @@ import "./App.css";
 
 const App = () => {
   return (
-    <center className="todo-container">
+    <center classNameName="todo-container">
       <AppName />
       <AddTodo />
-      <div className="items-container">
-        
-      <TodoItem1/>
-      <TodoItem2/>
+      <div classNameName="items-container">
+        <TodoItem1 />
+        <TodoItem2 />
       </div>
-
     </center>
-    
   );
 };
 
