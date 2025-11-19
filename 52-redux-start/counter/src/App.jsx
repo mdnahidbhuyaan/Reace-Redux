@@ -6,6 +6,7 @@ import Container from "./components/Container";
 import Controls from "./components/Controls";
 import { useSelector } from "react-redux";
 import PrivacyMassage from "./components/PrivacyMassage";
+import React from "react";
 const App = () => {
   const privacy = useSelector(store => store.privacy)
   return (
