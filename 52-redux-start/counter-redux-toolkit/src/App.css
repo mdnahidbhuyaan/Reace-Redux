@@ -1,0 +1,17 @@
+
+
+
+.lead{
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+.controls-row{
+    margin-top: 20px;
+}
+.number-input{
+
+max-width: 120px;
+border-radius: 5px;
+outline: none;
+
+}
