@@ -19,6 +19,7 @@ const App = () => {
             <div className="col-lg-6 mx-auto">
               {privacy ? <PrivacyMassage /> : <DisplayCounter />}
               <Controls />
+              <h1>hello</h1>
                
             </div>
           </Container>
